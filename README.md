@@ -3,19 +3,29 @@
 
 ### 跑推薦需要的檔案
 ```
+──── main.py #介紹使用
+│
+──── manip_data.py #整理資料用
+│
+──── recommend.py # 推薦用
+│
 ──── ./semi_data
+│
 │──── recom_dict_yyyymmdd-hhMMss.pkl # 存下面三個路徑
 │──── tfidf_dict.pkl #斷好的詞庫
 │──── tfidf_mtx.pkl #矩陣
 │──── main_token_ls.pkl #main item token(主要被推薦的文本斷詞)
 │──── tfidf_mainidx.npy #main item idx(主要被推薦的index)
+│
 ──── ./analysis_data
 │──── tech_list.csv #main item list (技術清單)
+│
 ```
 
 ### Usage
 
 ```
+# as main.py
 # 讀取檔案
 tfidf_fp = pickle.load(open('./semi_data/recom_dict_20220908-231214.pkl', 'rb'))
 
