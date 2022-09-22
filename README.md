@@ -39,20 +39,19 @@ tfidf_fp = pickle.load(open('./semi_data/recom_dict_20220908-231214.pkl', 'rb'))
 
 target_str= '專利 技術 監測 系統 智慧照顧 醫療人員 專利 人員 醫療'
 
-target_str_2=get_tech_token_by_id('90')
+target_str_2=get_tech_token_by_id('5100')
 
 #要排除的 tech id list
-exclude_ids=['90']
+exclude_ids=['5100']
 
-# 推薦數量
-recom_num = 5
-out_1 = get_recom_result(tfidf_fp, target_str, recom_num)
-out_2 = get_recom_result(tfidf_fp, target_str_2, recom_num, exclude_ids)
+out_1 = get_recom_result(tfidf_fp, target_str, 5)
+out_2 = get_recom_result(tfidf_fp, target_str_2, 5, exclude_ids)
 
 print(out_1)
-['92', '95', '96', '98', '99'] #推薦技術的id
+['5286', '5280', '5279', '5231', '5223'] #推薦技術的id
 
 print(out_2)
-['91', '94', '99', '102', '111']
+['5267', '5268', '5269', '5270', '5271']
+
 
 ```
