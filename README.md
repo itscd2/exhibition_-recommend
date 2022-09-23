@@ -20,6 +20,8 @@
 ──── ./analysis_data
 │──── tech_list.csv #main item list (技術清單)
 │
+──── company_tech_ready
+│──── tie_company_recom_20tech.xlsx (預先跑好的每間公司推薦20項技術)
 ```
 
 ### Usage
@@ -55,3 +57,16 @@ print(out_2)
 
 
 ```
+
+### 資料補充說明
+
+
+
+
+
+./analysis_data/tech_list.csv :參展技術清單
+是從「參展技術清單_0921.xlsx」
+Sheet '國防部' + Sheet'未來科技館追加_TIE Award、創新產學合作所有技術'
+Sheet ''參展清單0907' 剔除重複, 扣掉 Sheet'取消參展資料' 的技術清單
+
+
